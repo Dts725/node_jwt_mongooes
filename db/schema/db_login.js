@@ -1,6 +1,6 @@
 let db = require('../config/db_fetch')
 let mos = require('mongoose')
-let schema = mos.schema;
+let schema = mos.Schema;
 function fn () {
     let login = new schema({
         user : String,
@@ -12,6 +12,6 @@ function fn () {
         },
     })
 
-    return db.mongoose('admin').model('login',login)
+    return db.mongoose('admin').model('login',login);
 }
 module.exports=fn;

@@ -1,12 +1,15 @@
-let schema = require('../schema/db_login');
+const schema = require('../schema/db_login');
 let o ={
-    save : (ol,nw) => {
-        let login = new schema().findOneAndUpdate(ol,nw);
+    save : (data) => {
+        console.log(data)
+        let n = schema()
+        let login = new n(data).save();
        
         return login;
     },
 
     query : (data) => {
+       
         let login = new schema().find(data);
         return login;
     }

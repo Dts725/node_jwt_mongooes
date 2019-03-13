@@ -54,7 +54,7 @@ async function fn(req, res, next) {
                     name: req.body.replace
                 }
                 let _res = await user.delete(ol, nw)
-                    // _res =  new res_status(_res);
+                    _res =  new res_status(_res);
                 res.send(_res);
                 break;
             };
