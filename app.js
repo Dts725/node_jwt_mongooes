@@ -6,9 +6,12 @@ let logger = require('morgan');
 let bodyParser = require('body-parser');
 let servie_router = require('./routes/servie_router');
 let web_router = require('./routes/web_router');
-
+let res_status = require('./bin/config')
+let cors = require('cors')
 let app = express();
-
+// 全局返回转状态配置
+global.res_status = res_status.res_status;
+app.use(cors())
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -21,9 +24,14 @@ app.use(express.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+// app.use((req, res, next) => {
+//   // res.body({data: 'hahahaha'})
+//   // next()
+//   console.dir(res.get())
+// })
 app.use('/', servie_router);
 app.use('/web', web_router);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

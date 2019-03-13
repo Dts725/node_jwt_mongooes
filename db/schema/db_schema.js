@@ -1,5 +1,5 @@
 let Mongooes = require('mongoose')
-const db = require('./db_fetch')
+const db = require('../config/db_fetch')
 let Schema = Mongooes.Schema;
 
 
