@@ -4,7 +4,7 @@ const url =  {
   // 数据库地址
   db_url :  'mongodb://47.100.55.117:27017/',
 
-  // response  样式 
+  // response  构造函数 
   res_status: function (data, code = 0 ,status = 200 ) {
       this.data = data;
       this.status = status,

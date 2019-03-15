@@ -36,7 +36,6 @@ if (cluster.isMaster) {
   server.on('error', onError);
   server.on('listening', onListening);
     console.log(`工作进程 ${process.pid} 已启动`);
-
 }
 
 /**
