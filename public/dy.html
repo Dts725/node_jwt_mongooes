@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/home.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .bgz-map-parent {
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 900px;
+            height: 500px;
+            border-radius: 5px;
+            border: 1px solid #999;
+            color: #333;
+
+        }
+
+
+        .bgz-map-parent .chid1 {
+            box-sizing: border-box;
+
+            width: 35%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #d1ac91;
+        }
+
+        .child2 {
+            width: 65%;
+            height: 90%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+            align-content: flex-start;
+            box-sizing: border-box;
+            padding: 30px 40px;
+
+            font-size: 20px;
+        }
+
+        .bgz-map-parent ul {
+
+            height: 80%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+
+        }
+
+        .bgz-map-parent .child2>div:nth-of-type(1) p {
+            font-size: 20px;
+            font-weight: 700;
+
+        }
+
+        .bgz-map-parent .child2>div:nth-of-type(1) p>span {
+            color: #999;
+            margin-right: 0.5em;
+            font-size: 19px;
+
+        }
+
+        .bgz-map-parent .center {
+            height: 15%;
+            padding: 1em 0;
+            box-sizing: border-box;
+            border-top: 2px dashed #999;
+            border-bottom: 2px dashed #999;
+        }
+
+        .bgz-map-parent .center>ul {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            /* flex-flow: column wrap; */
+            justify-content: space-between;
+            align-content: center;
+
+        }
+
+        .bgz-map-parent .center>ul li {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        .bgz-map-parent .center>ul li p {
+            width: 25%;
+            text-align: center;
+            color: #999;
+        }
+
+        .bgz-map-parent .center>ul li:nth-of-type(2) p {
+            color: #000;
+        }
+
+        .bgz-map-parent .child2 h2 {
+            color: #999;
+            font-size: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bgz-map-parent">
+        <div class="chid1">
+            <ul style="height:52%;">
+                <li style="display: flex;
+                            min-width: 160px;
+                            height: 160px;
+                            flex-flow: row wrap;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            background-color: #fff;">
+                    <div style="width:90%;height: 90%;background-color: #d30000;border-radius: 50%;color: #fff; display: flex;flex-flow: column  wrap;  justify-content: space-evenly;align-items: center;">
+                        <p style="font-size:20px;font-weight: 700;">李真真</p>
+                        <img style="height:20px;" src="./images/famel_white.png" alt="">
+                    </div>
+                </li>
+                <li style="display: flex;
+                            flex-flow: column;
+                            justify-content: center;
+                            align-items: center;">
+                    <img style="height:30px;" src="./images/mpa_bgz.png" alt="">
+                    <span>鹤庆路258号</span>
+                </li>
+            </ul>
+        </div>
+        <div class="child2" style="height:100%;">
+            <div>
+                <h2>所属支部</h2>
+                <p>中共闵行区江川街道东风新村第一居民区重总支部委员会</p>
+            </div>
+            <div>
+                <p class="color-33 fw700"><span class="color-99 fw700" style="width :6em; letter-spacing:0.25em;">成立日期:</span><span
+                        style="margin-left: 1em;">1998-10-01</span></p>
+                <p class="color-33 fw700"><span class="color-99 fw700" style="width :6em;">党组织领域:</span><span style="margin-left: 1em;"></span>与上级党组织相同</span></p>
+            </div>
+
+            <div class="center" style="height:24%;">
+                <ul>
+                    <li>
+                        <p>学历</p>
+                        <p>民族</p>
+                        <p>健康状况</p>
+                    </li>
+                    <li>
+                        <p>本科</p>
+                        <p>汉</p>
+                        <p>良好</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="display: flex; justify-content: space-between;align-content: center;align-items: center;">
+                <div class="bottom-party">
+                    <h2>三会一课参与情况</h2>
+                    <p>中共闵行区江川街道东风新</p>
+                </div>
+                <div>
+                    <h2>主题党日参与情况</h2>
+                    <p>中共闵行区江川街道东风新</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

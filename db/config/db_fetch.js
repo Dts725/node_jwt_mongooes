@@ -10,7 +10,7 @@ module.exports = {
             password: 'abc123'
         }
     }) => {
-      return Mongoose.createConnection(`${url.db_url + col}`, options)
+        return Mongoose.createConnection(`${url.db_url + col}`, options)
     },
     log: (col, options = {
         useNewUrlParser: true,
@@ -20,7 +20,7 @@ module.exports = {
             password: 'abc123'
         }
     }) => {
-      return Mongoose.createConnection(`${url.db_url + col}`, options)
+        return Mongoose.createConnection(`${url.db_url + col}`, options)
     }
 }
 // 每个表配置一个连接  或者自定义连接

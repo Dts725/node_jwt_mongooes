@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="./vendor/jquery-1.11.1.min.js"></script>
+</head>
+<style>
+#select {
+    width: 280px;
+        height: 48px;
+        background-color: green;
+      
+    }
+
+      #selectChildren {
+          width: 240px;
+        height: 320px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border:1px solid #444;
+        overflow-y: auto;
+    }
+#select >p{
+    line-height: 100%;
+    text-align: center;
+}
+#selectChildren ul >li{
+overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+    border-bottom: 1px solid #eee;
+}
+#selectChildren ul >li:nth-of-type(odd){
+    background-color: #eee;
+    border-bottom: 1px solid #cecece;
+}
+</style>
+
+<body>
+    <div id='select'><p>江川街道</p></div>
+    <div id="selectChildren"></div>
+</body>
+
+<script>
+    window.onload = function () {
+        $.ajax({
+            type: 'get',
+            url: 'https://apijcdj.shyunhua.com/admin/data_map/community_swap_list',
+            success: function (res) {
+                console.dir(res.data.data)
+                let str
+                let ulrTop = `<ul>`
+                let urlEnd = `</ul>`
+
+                res.data.data.forEach(el => {
+                    str += ` <li data-value='${[el.id,el.sync_id]}'>${el.name}</li>`
+                });
+
+                str = ulrTop + str + urlEnd;
+
+                $('#select').on('click', function () {
+                    $('#selectChildren').append(str)
+                })
+                $('#selectChildren').on('click', 'li', function (e) {
+                    console.log(e.target.dataset.value)
+                })
+
+            }
+        })
+    }
+</script>
+
+</html>

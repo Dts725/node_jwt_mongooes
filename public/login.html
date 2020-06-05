@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name=full-screen content=yes>
+    <meta name=renderer content=webkit>
+    <meta http-equiv=X-UA-Compatible content="chrome=1,IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui" />
+    <meta charset="utf-8">
+    <link href="vendor/layui-v2.2.3/layui/css/layui.css" rel="stylesheet" />
+    <title>登录</title>
+</head>
+
+<body>
+    <div style="background:url(images/login.jpg) no-repeat;height: 100%;width: 100%;background-size:100% 100%;"></div>
+    <div class="frame">
+        <img class="logo" src="images/logo.png">
+        <p class="title">江川路街道党建可视化</p>
+        <div class="nav">
+            <div class="nav0" style="width:100%">
+                <select name="party" id="partySelect">
+                    <option value="0">请选择</option>
+                    <option value="1">江川路街道</option>
+                    <option value="2">居民区</option>
+                </select>
+            </div>
+            <div class="nav1" style="width:100%">
+                <input class="user" type="text" placeholder="用户名" />
+                <div style="width:80%">
+                    <p class="pont pont1">请输入用户名</p>
+                </div>
+            </div>
+            <div class="nav2" style="width:100%">
+                <input class="pass" type="password" placeholder="密码" />
+                <div style="width:80%">
+                    <p class="pont pont2">请输入密码</p>
+                </div>
+            </div>
+            <p class="submit">登录</p>
+        </div>
+    </div>
+    </div>
+    <script src="vendor/jquery-1.11.1.min.js"></script>
+    <script>
+        window.onload = function () {
+            $(document).ajaxSend(function (event, jqxhr, settings) {
+
+                // settings.xhrFields = true;
+                // settings.withCredentials = true;
+                // settings.crossDomain = true;
+
+
+            })
+        }
+
+
+        $(".user").blur(() => {
+            if (!$(".user").val()) {
+                $(".pont1").css('display', 'block')
+            } else {
+                $(".pont1").css('display', 'none')
+            }
+        })
+        $(".pass").blur(() => {
+            if (!$(".pass").val()) {
+                $(".pont2").css('display', 'block')
+            } else {
+                $(".pont2").css('display', 'none')
+            }
+        })
+        $(document).on('keyup', function (e) {
+
+            if (e.keyCode === 13) {
+                submit()
+            }
+
+        })
+
+        submit()
+
+        function submit() {
+            $(".submit").click(() => {
+                let name = $('.user').val().trim();
+                let pass = $('.pass').val().trim();
+                let type = $('#partySelect').val().trim();
+
+                if (type === '0') {
+                    layer.msg('请选择登录居委或街道')
+                    return
+                }
+                let data = {
+
+                    name: name,
+                    password: pass,
+                    type: type
+
+                }
+                
+
+                $.ajax({
+                    type: 'post',
+                    // url: '//party.com/admin/system/login',
+                    url: 'https://apijcdj.shyunhua.com/admin/system/login',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    data: data,
+                    success: function (res) {
+
+                        if (res.code === 0 && !Array.isArray(res.data)) {
+                            window.localStorage.setItem('user', JSON.stringify(res))
+
+                            window.location.href = './index.html'
+                        } else {
+                            layer.msg(res.status);
+
+                        }
+                    }
+                })
+            })
+        }
+    </script>
+    <script src="vendor/layui-v2.2.3/layui/layui.all.js"></script>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    .frame {
+        background: #fff;
+        border-radius: 6px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        padding-bottom: 40px;
+        position: fixed;
+        width: 31.25%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 199;
+    }
+
+    .logo {
+        width: 27%;
+        margin-top: 2.25rem;
+    }
+
+    .title {
+        color: #d7221a;
+        font-weight: 700;
+        font-size: 2.625rem;
+        height: 5.375rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav {
+        height: 21.125rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav .nav0>select {
+        width: 80%;
+        height: 2.5rem;
+        margin-bottom: 0.5em;
+        border-radius: 5px;
+    }
+
+    .nav .nav1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 3.75rem;
+    }
+
+    .nav .nav2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 3.75rem;
+    }
+
+    .nav input {
+        height: 3.75rem;
+        width: 80%;
+        outline: none;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 1.25rem;
+        padding-left: 3.3rem;
+        box-sizing: border-box;
+        /* margin-bottom: 1.25rem */
+    }
+
+    .nav2>input {
+        background: url(images/icon02.png) no-repeat 1.25rem center;
+        background-size: 1.25rem;
+        margin-top: 1rem;
+    }
+
+    .nav1>input {
+        background: url(images/icon01.png) no-repeat 1.25rem center;
+        background-size: 1.25rem;
+    }
+
+    .nav .submit {
+        width: 80%;
+        height: 3.75rem;
+        border-radius: 10px;
+        outline: none;
+        background: #d7221a;
+        border: 0;
+        color: #fff;
+        font-size: 1.25rem;
+        cursor: pointer;
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pont {
+        float: left;
+        color: red;
+        font-size: 0.75rem;
+        display: none;
+    }
+</style>
+
+</html>

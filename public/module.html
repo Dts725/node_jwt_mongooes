@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .bgz-map-parent {
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 900px;
+            height: 900px;
+            border-radius: 5px;
+            border: 1px solid #999;
+            color: #333;
+
+        }
+
+
+        .bgz-map-parent .chid1 {
+            box-sizing: border-box;
+
+            width: 35%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #d1ac91;
+        }
+
+        .child2 {
+            width: 65%;
+            height: 90%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+            align-content: flex-start;
+            box-sizing: border-box;
+            padding: 30px 40px;
+
+            font-size: 20px;
+        }
+
+        .bgz-map-parent ul {
+
+            height: 80%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+
+        }
+
+        .bgz-map-parent .child2>div:nth-of-type(1) p {
+            font-size: 20px;
+            font-weight: 700;
+
+        }
+
+        .bgz-map-parent .child2>div:nth-of-type(1) p>span {
+            color: #999;
+            margin-right: 0.5em;
+            font-size: 19px;
+
+        }
+
+        .bgz-map-parent .center {
+            height: 15%;
+            padding: 1em 0;
+            box-sizing: border-box;
+            border-top: 2px dashed #999;
+            border-bottom: 2px dashed #999;
+        }
+
+        .bgz-map-parent .center>ul {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            /* flex-flow: column wrap; */
+            justify-content: space-between;
+            align-content: center;
+
+        }
+
+        .bgz-map-parent .center>ul li {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+        .bgz-map-parent .center>ul li p {
+            width: 25%;
+            text-align: center;
+            color: #999;
+        }
+
+        .bgz-map-parent .center>ul li:nth-of-type(2) p {
+            color: #000;
+        }
+
+        .bgz-map-parent .child2 h2 {
+            color: #999;
+            font-size: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bgz-map-parent">
+
+        <div class="chid1">
+            <ul>
+                <li><img src="./images/photo.png" alt=""></li>
+                <li style="display: flex;
+                            flex-flow: row wrap;
+                            justify-content: center;
+                            align-items: center;">
+                    <p style="font-size:20px;font-weight: 700;">李真</p>
+                    <img style="height:20px;" src="./images/bgz_famle.png" alt="">
+                </li>
+                <li>
+                    <p>37周岁</p>
+                </li>
+                <li style="display: flex;
+                            flex-flow: column;
+                            justify-content: center;
+                            align-items: center;">
+                    <img style="height:30px;" src="./images/bgz_phone.png" alt="">
+                    <span>18588888888</span>
+                </li>
+                <li style="display: flex;
+                            flex-flow: column;
+                            justify-content: center;
+                            align-items: center;">
+                    <img style="height:30px;" src="./images/mpa_bgz.png" alt="">
+                    <span>鹤庆路258号</span>
+                </li>
+            </ul>
+        </div>
+        <div class="child2">
+            <div>
+                <p><span>职务:</span>书记</p>
+                <p><span>职责:</span>主持社区全局工作</p>
+            </div>
+
+            <div class="center">
+                <ul>
+                    <li>
+                        <p>委员数</p>
+                        <p>副书记数</p>
+                        <p>兼副书记数</p>
+                        <p>中共党员</p>
+                    </li>
+                    <li>
+                        <p>5</p>
+                        <p>1</p>
+                        <p>0</p>
+                        <p>81</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-party">
+                <h2>党组织名称</h2>
+                <p>中共闵行区江川街道东风新村第一居民区重总支部委员会</p>
+            </div>
+            <div>
+                <h2>服务理念</h2>
+                <p>中共闵行区江川街道东风新村第一居民区重总支部委员会中共闵行区江川街道东风新村第一居民区重总支部委员会</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

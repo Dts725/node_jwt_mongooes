@@ -1,0 +1,167 @@
+/* 整体设置 */
+#easy-alert {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+  font-size: 15px;
+}
+
+#easy-alert p {
+  min-height: 10px;
+}
+
+/* 遮罩层 */
+#easy-alert .easy-alert-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/* 内容容器 */
+#easy-alert .easy-alert-box {
+  width: 45%;
+  height: 59%;
+  position: absolute;
+  top: calc((100% - 60%) / 2);
+  left: calc((100% - 50%) / 2);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 10px;
+  background-color: #fff;
+  /*overflow: hidden;*/
+  cursor: default;
+}
+
+/* header头部 */
+#easy-alert .easy-alert-header {
+  height: 45px;
+  line-height: 45px;
+  cursor: default;
+  position: relative;
+  background-color: #ff9900;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 关闭按钮 */
+#easy-alert .easy-alert-close {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 45px;
+}
+
+#easy-alert .easy-alert-close:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #ff9900;
+  -webkit-transition: background-color 0.15s;
+  -moz-transition: background-color 0.15s;
+  -ms-transition: background-color 0.15s;
+  -o-transition: background-color 0.15s;
+  transition: background-color 0.15s;
+}
+
+/* 主内容区域 */
+#easy-alert .easy-alert-body{
+  height: calc(100% - 45px);
+}
+/*!* 上半部分 *!*/
+#easy-alert .easy-alert-body-top {
+  height: 170px;
+  background-color: #ff9900;
+  color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+#easy-alert .easy-alert-body .easy-alert-body-img-box {
+  width: 110px;
+  height: auto;
+  min-height: 120px;
+  background: rgba(0, 0, 0, 0.35);
+  margin-right: 30px;
+}
+
+#easy-alert .easy-alert-body .easy-alert-body-img-box img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#easy-alert .easy-alert-body-info strong {
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+#easy-alert .easy-alert-body-info p {
+  margin: 10px 0;
+}
+
+/* 下半部分 -- 内容区域*/
+#easy-alert .easy-alert-body-bottom{
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 1rem 5%;
+  overflow: auto;
+  justify-content: center;
+  height: calc(104% - 185px);
+}
+/*#easy-alert .easy-alert-body-bottom .easy-alert-body-bottom-con{*/
+/*flex-direction: column;*/
+/*!*align-items: flex-start;*!*/
+/*!*justify-content: space-between;*!*/
+/*min-height: 60%;*/
+/*width: 75%;*/
+/*font-size: inherit;*/
+/*}*/
+/*#easy-alert .easy-alert-body-bottom .easy-alert-body-bottom-con .easy-alert-bottom-btns{*/
+/*text-align: center;*/
+/*width: 100%;*/
+/*}*/
+
+/** 按钮 **/
+#easy-alert .easy-alert-btn {
+  padding: 8px 40px;
+  background-color: #ff9900;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  border: 1px solid transparent;
+}
+
+#easy-alert .easy-alert-btn:hover {
+  background-color: transparent;
+  color: #ff9900;
+  border-color: #ff9900;
+  cursor: pointer;
+  -webkit-transition: all, 0.15s;
+  -moz-transition: all, 0.15s;
+  -ms-transition: all, 0.15s;
+  -o-transition: all, 0.15s;
+  transition: all, 0.15s;
+}

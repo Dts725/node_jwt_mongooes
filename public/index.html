@@ -1,1 +1,613 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>智慧泰达社区后台管理系统</title><link rel="shortcut icon" href=/favicon.ico><link href=/static/css/app.5f7824975e3fcfb80dcdf1f1cc2c2ba8.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.ce3aea8e35677e495b54.js></script><script type=text/javascript src=/static/js/vendor.69e35b1e5e3a76a3a693.js></script><script type=text/javascript src=/static/js/app.f7be2b5244b4f178e79a.js></script></body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="full-screen" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"
+    />
+    <meta charset="utf-8" />
+    <title>闵行党建管理信息平台</title>
+    <link rel="stylesheet" href="vendor/animate.css" />
+    <link rel="stylesheet" href="./images/themes/default/style.min.css" />
+    <link rel="stylesheet" href="css/swiper-4.3.3.min.css" />
+    <link href="vendor/layui-v2.2.3/layui/css/layui.css" rel="stylesheet" />
+    <link href="vendor/easy-alert/easy-alert.css" rel="stylesheet" />
+    <!-- index -->
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/home.css" rel="stylesheet" />
+  </head>
+
+  <body class="content">
+    <div class="swiper-container swiper-no-swiping">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="positioning">
+            <!-- <h3 class="title">闵行党建管理信息平台</h3> -->
+            <!--
+              <i class="go-next" onclick="goNext()"><img src="./images/row-r.png" alt=""></i>
+            -->
+            <!--
+              <iframe class="swiper-slide-con" id="inlineFrameExample" title="Inline Frame Example" width="1000" height="600"
+                src="//32.1.9.188/idealDJP_MH/djp/web/dwbigscreen/dwbigscreen.action">
+              </iframe>
+            -->
+            <iframe
+              class="swiper-slide-con"
+              id="inlineFrameExample"
+              title="Inline Frame Example"
+              width="1000"
+              height="600"
+              src="//dj.mhdw.gov.cn/idealDJP_MH"
+            >
+            </iframe>
+            <!---->
+            <!-- <div class="layui-collapse" lay-accordion=""> -->
+
+            <!-- <div class="layui-colla-item"> -->
+            <!--
+              <h2 class="layui-colla-title">为什么前端工程师多不愿意用 Bootstrap 框架？</h2>
+            -->
+            <!-- <div class="layui-colla-content"> -->
+            <!--
+              <p>因为不适合。如果希望开发长期的项目或者制作产品类网站，那么就需要实现特定的设计，为了在维护项目中可以方便地按设计师要求快速修改样式，肯定会逐步编写出各种业务组件、工具类，相当于为项目自行开发一套框架。——来自知乎@Kayo</p>
+            -->
+            <!-- </div> -->
+            <!-- </div> -->
+
+            <!-- </div> -->
+            <!---->
+            <i class="go-next go-next2" onclick="goNext()">
+              <img src="./images/row-r.png" alt="" />
+            </i>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="positioning">
+            <!-- <h3 class="title"> -->
+            <!-- <img src="./images/ico.png" alt=""> 智慧党建可视化 -->
+            <!-- </h3> -->
+            <div class="tabs">
+              <span
+                class="tabs-active lihang"
+                style="color:#ff3300;font-weight:700"
+                >515领航</span
+              >
+              <span class="party-open click-open">党务公开</span>
+              <div
+                class="flex-around"
+                id="returnLogin"
+                style="float :right; margin-right: 50px; height: 100%; width: 100px; cursor:pointer;"
+              >
+                <span style="line-height:28px;padding: 0px;margin: 0px;"
+                  >退出</span
+                >
+                <img style="height:28px;" src="./images/return.png" />
+              </div>
+            </div>
+            <div class="tabs-box" id="tabs-box">
+              <!-- 领航队伍 -->
+              <div class="tabs-box-con">
+                <i class="go-next go-next2" onclick="goMap()">
+                  <img src="./images/row-r.png" alt="" />
+                </i>
+
+                <span class="go-back go-back2" onclick="goBack()">
+                  <img src="./images/row-l.png" alt="" />
+                </span>
+                <!-- <img class="lhzt" src="./images/515_01.png" alt="" > -->
+                <div class="lhdw">
+                  <img class="lhdw_a " src="./images/opacity.png" alt="" />
+                  <img class="lhdw_c " src="./images/opacity.png" alt="" />
+                  <img class="lhdw_b " src="./images/opacity.png" alt="" />
+                </div>
+                <img class="tabs-con-bg" src="./images/515bg.jpg" alt="" />
+
+                <!-- 区域化单位双报道双报告 -->
+                <div class="mhdw">
+                  <img class="mhdw_a" src="./images/opacity.png" alt="" />
+                  <img class="mhdw_b" src="./images/opacity.png" alt="" />
+                  <img class="mhdw_c" src="./images/opacity.png" alt="" />
+                </div>
+
+                <!-- 领航核心 -->
+                <div class="lhhx">
+                  <img class="lhhx_a" src="./images/opacity.png" alt="" />
+                </div>
+              </div>
+              <div class="tabs-box-con" style="display: none; width:100%;">
+                <div class="dwgk-zblp"></div>
+                <div class="dwgk-dylp">
+                  <!--
+                    <p class="dwgk-dylp-0">李忠玉、顾倩倩、黄正其、阎桂英、章霞君、萨本佶</p>
+                    <p class="dwgk-dylp-1">孙同兴、仇宗定、马功正、孙丽华、罗志谋、吴昕甲</p>
+                    <p class="dwgk-dylp-2">张国珍、王海琳、蒋兴荣、金文浩、朱伯群、赵士林</p>
+                    <p class="dwgk-dylp-3">郁文富、周利璋、陈春华、孙叶蕾、杨连波、周建明</p>
+                    <p class="dwgk-dylp-4">王艳梅、周永红、吴之昊、瞿晓颖、金庭栋......</p>
+                  -->
+                </div>
+                <div>
+                  <i class="go-next go-next2" onclick="goNext()">
+                    <img src="./images/row-r.png" alt="" />
+                  </i>
+
+                  <span class="go-back go-back2" onclick="goBack()">
+                    <img src="./images/row-l.png" alt="" />
+                  </span>
+                </div>
+                <div class="dwgk-zbzz">
+                  <!-- <p class="dwgk-zbzz-0"></p> -->
+                  <!-- <p class="dwgk-zbzz-1"></p> -->
+                  <!-- <p class="dwgk-zbzz-2"></p> -->
+                  <!-- <p class="dwgk-zbzz-3"></p> -->
+                  <!-- <p class="dwgk-zbzz-4"></p> -->
+                  <!-- <p class="dwgk-zbzz-5"></p> -->
+                </div>
+                <div class="dwgk-rcdwgk"><img src="" alt="" /></div>
+                <div class="dwgk-zbzd">
+                  <p class="dwgk-zbzd-0">
+                    <img
+                      src="images/zbzd-icon.png"
+                      style="margin-right:0.5rem;"
+                      alt=""
+                    />组织生活会制度
+                  </p>
+                  <p class="dwgk-zbzd-1">
+                    <img
+                      src="images/zbzd-icon.png"
+                      style="margin-right:0.5rem;"
+                      alt=""
+                    />党组织收集分析、流转处理、答复反馈制度
+                  </p>
+                  <p class="dwgk-zbzd-2">
+                    <img
+                      src="images/zbzd-icon.png"
+                      style="margin-right:0.5rem;"
+                      alt=""
+                    />党组织“三会一课”制度
+                  </p>
+                  <p class="dwgk-zbzd-3">
+                    <img
+                      src="images/zbzd-icon.png"
+                      style="margin-right:0.5rem;"
+                      alt=""
+                    />组团式联系服务群众工作机制
+                  </p>
+                  <p class="dwgk-zbzd-4">
+                    <img
+                      src="images/zbzd-icon.png"
+                      style="margin-right:0.5rem;"
+                      alt=""
+                    />党员教育管理及发展党员制度
+                  </p>
+                  <p class="dwgk-zbzd-5">
+                    <img
+                      src="images/zbzd-icon.png"
+                      style="margin-right:0.5rem;"
+                      alt=""
+                    />党风廉政责任制度
+                  </p>
+                  <p class="dwgk-zbzd-6">
+                    <img
+                      src="images/zbzd-icon.png"
+                      style="margin-right:0.5rem;"
+                      alt=""
+                    />“主题党日”制度
+                  </p>
+                  <p class="dwgk-zbzd-7">
+                    <img
+                      src="images/zbzd-icon.png"
+                      style="margin-right:0.5rem;"
+                      alt=""
+                    />党组织书记述职报告制度
+                  </p>
+                  <p class="dwgk-zbzd-8">
+                    <img
+                      src="images/zbzd-icon.png"
+                      style="margin-right:0.5rem;"
+                      alt=""
+                    />民主评议党员制度
+                  </p>
+                  <p class="dwgk-zbzd-9">
+                    <img
+                      src="images/zbzd-icon.png"
+                      style="margin-right:0.5rem;"
+                      alt=""
+                    />协商议事工作和监督制度
+                  </p>
+                  <p class="dwgk-zbzd-10">
+                    <img
+                      src="images/zbzd-icon.png"
+                      style="margin-right:0.5rem;"
+                      alt=""
+                    />党内关怀、帮扶制度
+                  </p>
+                </div>
+
+                <!-- 党务公开 -->
+                <img
+                  class="tabs-con-bg"
+                  src="./images/dw_bg.jpg"
+                  style="width:100%;"
+                  alt=""
+                />
+                <div class="orgnaiztion_jw"><p>江川路街道居委会</p></div>
+                <div class="orgnaiztion_injor">
+                  <p style="text-align:left;"></p>
+                </div>
+              </div>
+            </div>
+            <div class="tabs tabs2">
+              <span
+                class="tabs-active lihang"
+                style="color:#ff3300;font-weight:700"
+                >515领航</span
+              >
+              <span class="party-open click-open">党务公开</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- index -->
+        <div class="swiper-slide">
+          <div id="header">
+            <img src="images/ico.png" />
+            <h1 id="partyBanner">江川路街道智慧党建地图</h1>
+
+            <div id="select"><p>江川路街道</p></div>
+            <div id="selectChildren"></div>
+            <!--
+              <span class="go-back" onclick="goBack()"><img src="./images/row-l.png" alt=""></span>
+            -->
+          </div>
+
+          <ul
+            id="rightTab"
+            style="position: absolute;top: 30%;right: 450px;z-index: 100;"
+          >
+            <li class="detail">党组织</li>
+            <li class="detail">党员</li>
+            <li class="detail hid">在职党员</li>
+            <li class="detail">三长</li>
+            <li class="detail">团队党建</li>
+            <li class="detail">区域化党建</li>
+            <li class="detail" id="secrartyComminty">班长工程</li>
+          </ul>
+          <span id="hideRight"> <i class="layui-icon">&#xe602;</i> </span>
+          <!-- 右侧面板 -->
+          <div id="aside">
+            <div id="w" class="" lay-filter="rightItems"></div>
+          </div>
+
+          <div class="con1 container">
+            <div class="box1 con" id="con"><div id="new_svg"></div></div>
+          </div>
+
+          <span class="go-back go-back2" onclick="goBack()">
+            <img src="./images/row-l.png" alt="" />
+          </span>
+        </div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <!-- <div class="swiper-pagination"></div> -->
+
+      <!-- 如果需要导航按钮 -->
+      <!-- <div class="swiper-button-prev"></div> -->
+      <!-- <div class="swiper-button-next"></div> -->
+
+      <!-- 如果需要滚动条 -->
+      <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+  </body>
+
+  <script src="vendor/jquery-1.11.1.min.js"></script>
+  <script src="js/partyOpen.js"></script>
+
+  <script src="js/jsonData.js"></script>
+  <script src="./js/jstree.min.js"></script>
+  <script src="./js/echarts.min.js"></script>
+  <script src="./echarJason.js"></script>
+  <script src="js/swiper-4.3.3.min.js"></script>
+  <script src="vendor/layui-v2.2.3/layui/layui.all.js"></script>
+  <script src="js/partyBuild.js"></script>
+  <script src="vendor/easy-alert/easy-alert.js"></script>
+  <!-- index -->
+  <!-- <script src="vendor/d3.v3.min.js"></script> -->
+  <!-- <script src="vendor/TweenMax.min.js"></script> -->
+  <script src="js/valueFromJson.js"></script>
+  <script
+    type="text/javascript"
+    src="//api.map.baidu.com/api?v=3.0&ak=BjwxpoGAKFg1n626l19yNpCmvVrpL9rv"
+  ></script>
+  <!-- <script
+    type="text/javascript"
+    src="//api.map.baidu.com/api?v=3.0&ak=Ff4B7Ksey2j7AtbweuHPN1oKGeQa1pYe"
+  ></script> -->
+  <script src="js/index.js"></script>
+  <script>
+    let openSrc = "";
+
+    window.onload = function() {
+      let text = JSON.parse(window.localStorage.getItem("user")).data
+        .community_name;
+      text =
+        text.substr(0, text.length <= 5 ? text.length : text.length - 5) +
+        "智慧党建地图";
+      $("#partyBanner").text(text);
+      console.log(loginType);
+      if (loginType === 2) {
+        $(".party-open").removeClass("party-open");
+        $("#select").css("display", "none");
+        $(".click-open").on("click", function() {
+          // $(".lihang").removeAttr("style");
+          // $(".click-open").css({
+          //   color: "#ff3300",
+
+          //   "font-weight": "700"
+          // });
+          //党务公开简介
+          $.ajax({
+            url: locallUrl + "/admin/daily_party_affairs_intro",
+            type: "get",
+            data: {},
+            success: function(res) {
+              let str = res.data;
+
+              $(".orgnaiztion_injor p").text(str);
+            }
+          });
+
+          // 党务公开图片
+          $.ajax({
+            url: locallUrl + "/admin/daily_party_affairs",
+            type: "get",
+            data: {
+              is_front: 1,
+              paginate: 1
+            },
+
+            success: function(res) {
+              openSrc = res.data.data[0].notice;
+
+              if (openSrc) {
+                $(".dwgk-rcdwgk img").attr(
+                  "src",
+                  "./images/20190710110528.png"
+                );
+                let name = openSrc[0].name.split(".")[0];
+
+                let str = `<p style="line-height:1.5rem;">${name}</p>`;
+                $(".dwgk-rcdwgk p").remove();
+
+                $(".dwgk-rcdwgk").append(str);
+              }
+            }
+          });
+        });
+      }
+    };
+
+    var mySwiper = new Swiper(".swiper-container", {
+      loop: false,
+      allowTouchMove: true,
+      // mousewheelControl: false,
+      // nested: false,
+      // threshold: 20,
+      // 如果需要分页器
+      // pagination: {
+      //   el: '.swiper-pagination',
+      // },
+
+      // mySwiper: lockSwipes(),
+
+      // 如果需要前进后退按钮
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+
+      // 如果需要滚动条
+      scrollbar: {
+        el: ".swiper-scrollbar"
+      }
+    });
+    mySwiper.on("slideChange", function(e) {
+      // 2 是地图所在的slider的index值
+      if (mySwiper.activeIndex == 2) {
+        mySwiper.allowTouchMove = false;
+      } else {
+        mySwiper.allowTouchMove = true;
+      }
+    });
+
+    /** 关闭支部职责 **/
+    function closeZbzz() {
+      // var ele = document.getElementById('zbzz');
+      // ele.parentElement.removeChild(ele);
+      var ele = $("#zbzz");
+
+      ele
+        .find("#zbzzImg")
+        .removeClass("zoomIn")
+        .addClass("zoomOut");
+      // ele.removeClass('zoomIn').addClass('zoomOut');
+      setTimeout(function() {
+        ele.hide();
+      }, 300);
+      // ele.parentElement.removeChild(ele);
+    }
+
+    /** 首屏去下一屏 **/
+    function goNext() {
+      // console.log(mySwiper.activeIndex);
+      if (loginType === 2) {
+        $("#secrartyComminty").remove();
+      }
+      mySwiper.slideTo(mySwiper.activeIndex + 1, 500, false);
+    }
+    /**中间去地图 **/
+    function goMap() {
+      // console.log(mySwiper.activeIndex);
+      mySwiper.slideTo(2, 500, false);
+      liCallBack(0);
+    }
+
+    // $(document).ready(function () {
+    console.log($(".tabs-box-con"));
+    /** swiper监测浏览器地址中是否有参数 **/
+    var to = Number(
+      window.location.href.replace(/^.*?to=/g, "").replace(/#/g, "")
+    );
+    if (to) {
+      mySwiper.slideTo(to, 500, false);
+    }
+
+    /** swiper滑块中的tabs切换事件 **/
+    $(".tabs").on("click", "span", function(e) {
+      var show = $(this).index();
+      $(".tabs span").removeClass("tabs-active border-2px");
+      //切换激活
+      // $(this).addClass('tabs-active').siblings().removeClass('tabs-active');
+
+      $(".tabs span").each(function(index, ele) {
+        var idx = $(this).index();
+        if (idx == show) {
+          $(this).addClass("tabs-active border-2px");
+        }
+      });
+      $("#tabs-box")
+        .children()
+        .each(function(idx, ele) {
+          if (idx == show) {
+            $(ele).show();
+            $(".click-open").css({
+              color: "#ff3300",
+              "font-weight": "700"
+            });
+            $(".lihang").removeAttr("style");
+          } else {
+            $(".click-open").removeAttr("style");
+            $(".lihang").css({
+              color: "#ff3300",
+
+              "font-weight": "700"
+            });
+            $(ele).hide();
+          }
+        });
+    });
+
+    //右侧样式控制
+    $("#hideRight").on("click", function(e) {
+      if ($("#aside").hasClass("asideHide")) {
+        $("#aside").addClass("asideHide");
+      } else {
+        $("#aside").removeClass("asideHide");
+      }
+    });
+
+    /** 支部职责 **/
+    $(".dwgk-zbzz").on("click", function(e) {
+      var ele = "";
+      if (!document.getElementById("zbzz")) {
+        var div = document.createElement("div");
+        var html =
+          '<div style="width:100%;height:100%;position:absolute;top:0;left:0;z-index:3000;background-color:rgba(0,0,0,0.6);cursor:pointer;" onclick="closeZbzz()"></div>' +
+          '<div style="width:55%;height:auto;position:absolute;top:10%;left:24%;z-index:3100;">' +
+          '<i style="display:block;position:absolute;right:11px;top:10px;width:30px;height:30px;cursor:pointer;z-index:200;" onclick="closeZbzz()"></i>' +
+          '<img id="zbzzImg" class="animated zoomIn" style="width:100%;height:auto;" src="./images/zbzz.png" alt="">' +
+          "</div>";
+        div.id = "zbzz";
+        div.innerHTML = html;
+        document.body.appendChild(div);
+      } else {
+        ele = $("#zbzz");
+        // $("#zbzzImg").addAnimation('zoomIn',200).removeAnimation('zoomIn');
+
+        ele
+          .find("#zbzzImg")
+          .removeClass("zoomOut")
+          .addClass("zoomIn");
+        // ele.removeClass('zoomOut').addClass('zoomIn');
+        // ele.show();
+        setTimeout(function() {
+          ele.show();
+        }, 100);
+      }
+
+      // var ele = document.getElementById('zbzz');
+      // var div = document.createElement('div');
+      // var html = '<div class="animated" style="width:100%;height:100%;position:absolute;top:0;left:0;z-index:3000;background-color:rgba(0,0,0,0.6);cursor:pointer;" onclick="closeZbzz()"></div>' +
+      //   '<div style="width:55%;height:auto;position:absolute;top:10%;left:24%;z-index:3100;">' +
+      //   '<i style="display:block;position:absolute;right:11px;top:10px;width:30px;height:30px;cursor:pointer;" onclick="closeZbzz()"></i>' +
+      //   '<img style="width:100%;height:auto;" src="./images/zbzz.png" alt="">' +
+      //   '</div>';
+      // div.id = 'zbzz';
+      // div.innerHTML = html;
+      // if (ele) {
+      //   ele.parentElement.removeChild(ele);
+      // }
+      // document.body.appendChild(div);
+    });
+    /** 日常党务公开 **/
+    $("#returnLogin").on("click", function() {
+      window.location.href = "./login.html";
+    });
+    $(".dwgk-rcdwgk").on("click", function(e) {
+      let img = "";
+
+      openSrc.forEach(el => {
+        img += ` <img style="margin: 0 0 1rem 0;" src="${el.url}" alt="">`;
+      });
+
+      let str = ` <div style="text-align:center;overflow: auto; width : 100%;">
+       ${img}
+        </div>`;
+      // let str = img;
+      openWindowsDaily(str, "日常党务公开", 1100, 900);
+    });
+
+    function goBack() {
+      mySwiper.slideTo(mySwiper.activeIndex - 1, 500, false);
+      $("#teamMember").remove();
+    }
+
+    function openWindowsDaily(con, title, width, height) {
+      layer.open({
+        type: 1,
+        title:
+          "<p>" +
+          '<s style="background-image: url(images/dh.png);display: inline-block;width: 28px;height: 28px;background-size: contain;vertical-align: middle;float: left;margin-top: 6px;"></s>' +
+          '<h3 style="font-family: 楷体;font-size: 22px; text-align: center;color: #f00;font-weight: bold;">' +
+          title +
+          "</h3>" +
+          "</p>",
+        area: [`${width + "px"}`, `${height + "px"}`],
+        content: con,
+        zIndex: layer.zIndex,
+        shadeClose: true,
+        //      offset: ['300px', '1000px'],
+        btn: ["确定"],
+        yes: function(index, layero) {
+          layer.close(index);
+        },
+        cancel: function() {
+          //右上角关闭回调
+          //return false 开启该代码可禁止点击该按钮关闭
+        },
+        success: function(layero) {
+          layer.setTop(layero); //窗口置顶
+        }
+      });
+    }
+
+    /** 515领航中的点击事件 **/
+
+    // });
+    // }
+  </script>
+</html>

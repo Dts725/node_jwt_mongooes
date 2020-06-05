@@ -16,7 +16,9 @@ global.res_status = res_status.res_status;
 global.jwt_key = res_status.jwt_key;
 global.jwt_auth = res_status.jwt_auth;
 // 配置跨域
-app.use(cors())
+app.use(cors({
+  origin : "*"
+}))
 
 // 兼容 vue  wpa 
 app.use(history())

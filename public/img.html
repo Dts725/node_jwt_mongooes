@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .flex-center {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .quhu_point {
+        width: 1200px;
+        height: 900px;
+        border: 1px solid #999;
+        padding: 0px 50px;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+    .bor_bt {
+        border-bottom: 2px solid #f00;
+        padding: 30px;
+    }
+
+    .flex-space-between {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .flex-space-between-warp {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .flex-space-between-cloumn {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-content: center;
+    }
+</style>
+
+<body>
+<div class="quhu_point flex-space-between-cloumn ">
+        <div class="flex-center bor_bt">
+            <img src="./images/dh.png" alt="">
+            <p style="margin-left:1em;">江川路街道</p>
+        </div>
+
+        <div class="flex-space-between ">
+            <div style="width:100%; padding:10px;">
+                <img style="max-width : 50%; " src="./images/515.jpg" alt="">
+            </div>
+            <p style="padding:15px 10px;">服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好服务很好</p>
+        </div>
+
+        <div style="border-top:2px dashed #999; width: 100%; padding: 10px 0;" class="flex-space-between">
+            <div>
+                <ul class="flex-space-between" style="width:115%; height: 50px;">
+                    <li class="flex-center"><img style="height: 40px;" src="./images/mpa_bgz.png" alt=""></li>
+                    <li style="width:2px;height: 100%;background:#999;"></li>
+                    <li class="flex-space-between-cloumn">
+                        <span style="color:#999;">单位地址</span>
+                        <span>鹤庆路258号</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <img src="./images/7.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

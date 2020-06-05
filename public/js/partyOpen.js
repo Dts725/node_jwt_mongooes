@@ -1,0 +1,1 @@
+const loginType = JSON.parse(window.localStorage.getItem('user')).data.type;
